@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" content="width=device-width, initial-       scale=1" />
+  <title>Atendimento on-line</title>
+  <link rel="stylesheet" type="text/css" href="CSS.css" />
+</head>
+
+<body>
+  <div id="page">
+    <header>
+      <h3>
+        Atendimento on-line
+      </h3>
+    </header>
+    <form id="formAdd" action="lista.html" method="post">
+      <fieldset>
+        <div class="form-area1">
+          <div class="form-area2">
+            <div class="form-comp3">
+              <div class="form-comp">
+                <label for="atendente">Atendente diz:</label>
+                <label for="mensagem">Blabla blabla blabla</label>
+              </div>
+
+              <div class="form-comp">
+                <label for="atendente">Atendente diz:</label>
+                <label for="mensagem">Blabla blabla blabla</label>
+              </div>
+            </div>
+            <div class="form-comp2">
+              <div class="form-comp">
+                <label for="você">Você diz:</label>
+                <label for="mensagem">Blabla blabla blabla</label>
+              </div>
+              <div class="form-comp">
+                <label for="você">Você diz:</label>
+                <label for="mensagem">Blabla blabla blabla</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-footer">
+            <div class="form-input">
+              <input type="text" id="input" name="input" placeholder="Digite sua mensagem..." />
+            </div>
+
+            <div class="form-button">
+              <button type="submit">Enviar</button>
+            </div>
+          </div>
+        </div>
+  </div>
+  </fieldset>
+  </form>
+  </div>
+  <script type="text/javascript">
+
+    function addMsg(msg) {
+
+      const nLabel2 = document.createElement("label");
+      nLabel2.innerText = "Você diz:";
+      //const nMsg2 = document.createTextNode("Você diz:");
+      //nLabel2.appendChild(nMsg2);
+
+      const msgAdd2 = document.querySelector(".form-comp2");
+      nLabel2.setAttribute("for", "você");
+      nLabel2.style.marginBottom = "5px"
+      msgAdd2.appendChild(nLabel2);
+
+
+      const nLabel = document.createElement("label");
+      nLabel.innerText = msg;
+
+      //const nMsg = document.createTextNode(msg);
+      //nLabel.appendChild(nMsg);
+
+      const msgAdd = document.querySelector(".form-comp2");
+      nLabel.setAttribute("for", "mensagem");
+      nLabel.style.marginBottom = "18px"
+      msgAdd.appendChild(nLabel);
+
+      const chatInterno = document.querySelector(".form-area2");
+      chatInterno.scrollTop = chatInterno.scrollHeight;
+    }
+
+    const formAdd = document.getElementById("formAdd");
+    formAdd.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const msgInput = document.getElementById("input");
+      
+      if(msgInput.value){
+      addMsg(msgInput.value);
+      }
+
+      msgInput.value = "";
+      msgInput.focus();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Helvetica;
+    font-size: 16px;
+  }
+  
+  #page {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid black;
+    color: blue;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 12px;
+    border-top: 2px solid green;
+    margin-top: 21px;
+  }
+  
+  form {
+    padding: 0px;
+  }
+  
+  .form-area1 {
+    border: 1px solid black;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .form-area2 {
+    border: 1px solid black;
+    width: 100%;
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    overflow: auto;     /*Pra evitar que as DIV flutuem por causa do float dos form-comps*/
+    zoom: 1;            /*Pra evitar que as DIV flutuem por causa do float dos form-comps*/
+    max-height: 450px;  /*Pra evitar que as DIV flutuem por causa do float dos form-comps*/
+  }
+  
+  .form-comp {
+    margin-bottom: 18px;
+  }
+  
+  .form-comp2 {
+    float: right;
+    text-align: right;
+    width: 60%;
+  }
+  
+  .form-comp3 {
+    float: left;
+    text-align: left;
+    width: 60%;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  label[for=mensagem]{
+    font-size: 16px;
+    padding: 8px 6px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  label[for=você]{
+  }
+  
+  .form-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+  }
+  
+  input {
+    display: block;
+    font-size: 16px;
+    padding: 8px 6px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+  
+  .form-input {
+    text-align: center;
+    width: 87%;
+  }
+  
+  .form-button {
+    text-align: center;
+    width: 10%;
+    min-width: 90px;
+  }
+  
+  button {
+    width: 100%;
+    margin: 9px auto;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 12px 2px;
+    background-color: light-gray;
+    color: green;
+    border: 0;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: green;
+    color: white;
+    transform: translate(2px, 2px);
+  }
